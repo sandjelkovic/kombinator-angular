@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Combination} from "../../../common/combination.model";
 
 @Component({
   selector: 'app-combination-item',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./combination-item.component.css']
 })
 export class CombinationItemComponent implements OnInit {
+
+  @Input() combination: Combination;
 
   constructor() { }
 

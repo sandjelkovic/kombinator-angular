@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {MatListModule} from '@angular/material/list';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
@@ -18,6 +19,12 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/take';
 
+const routes = [
+  {path: '', component: CombinationListComponent},
+  {path: ':combinationUUID', component: CombinationComponent},
+  {path: '**', redirectTo: '/'}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +40,8 @@ import 'rxjs/add/operator/take';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatListModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

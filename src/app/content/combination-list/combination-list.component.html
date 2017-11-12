@@ -1,3 +1,5 @@
-<p>
-  combination-list works!
-</p>
+<!--List of combinations-->
+<mat-nav-list>
+  <app-combination-item *ngFor="let combi of combinations" [combination]="combi"></app-combination-item>
+</mat-nav-list>
+<!--List of combinations-->
