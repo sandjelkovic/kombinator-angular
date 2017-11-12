@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CombinationService} from "../../services/combination.service";
+import {Combination} from "../../common/combination.model";
 
 @Component({
   selector: 'app-combination-list',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CombinationListComponent implements OnInit {
 
-  constructor() { }
+  private combinations: Array<Combination>;
+
+  constructor(private combinationService: CombinationService) {
+  }
 
   ngOnInit() {
+    this.combinations = this.combinationService.getCombinations()
   }
 
 }

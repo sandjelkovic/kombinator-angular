@@ -18,6 +18,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/take';
+import {CombinationService} from "./services/combination.service";
 
 const routes = [
   {path: '', component: CombinationListComponent},
@@ -43,7 +44,9 @@ const routes = [
     MatListModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    CombinationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
