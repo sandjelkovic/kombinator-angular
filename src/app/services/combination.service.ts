@@ -9,8 +9,9 @@ export class CombinationService {
 
   getCombinations(): Array<Combination> {
     return [
-      new Combination(1, "First Combination"),
-      new Combination(2, "Second Super Awesome Combination")
+      new Combination("1", "First Combination"),
+      new Combination("2", "Second Super Awesome Combination"),
+      new Combination("3-4dsf-123dsa", "New computer")
     ]
   }
 

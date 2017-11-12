@@ -1,3 +1,3 @@
-<p>
-  combination works!
-</p>
+<mat-accordion>
+  <app-combination-slot *ngFor="let slot of slots" [slot]="slot"></app-combination-slot>
+</mat-accordion>

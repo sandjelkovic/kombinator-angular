@@ -1,10 +1,9 @@
-
 export class Combination {
-  private uuid: number;
-  private name: string;
+  public uuid: string;
+  public name: string;
 
-  constructor(id: number, name: string) {
-    this.uuid = id;
+  constructor(uuid: string, name: string) {
+    this.uuid = uuid;
     this.name = name;
   }
 }

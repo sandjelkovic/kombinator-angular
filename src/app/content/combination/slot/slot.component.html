@@ -1,0 +1,18 @@
+<mat-expansion-panel  hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{slot.name}}
+    </mat-panel-title>
+    <mat-panel-description>
+      {{slot.selectedEntry()?.name}}
+    </mat-panel-description>
+    {{slot.value}}
+  </mat-expansion-panel-header>
+  <mat-list>
+    <mat-list-item *ngIf="slotEditingActive">
+      <mat-form-field>
+        <input matInput placeholder="Name" [(ngModel)]="slot.name">
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>
+</mat-expansion-panel>

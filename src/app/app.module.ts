@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {MatListModule} from '@angular/material/list';
+import {MatListModule, MatCardModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatRadioModule, MatIconModule} from "@angular/material";
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
@@ -19,6 +19,8 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/take';
 import {CombinationService} from "./services/combination.service";
+import { SlotComponent } from './content/combination/slot/slot.component';
+import { SlotEntryComponent } from './content/combination/slot-entry/slot-entry.component';
 
 const routes = [
   {path: '', component: CombinationListComponent},
@@ -35,13 +37,15 @@ const routes = [
     MainHeaderBarComponent,
     CombinationListComponent,
     CombinationComponent,
-    CombinationItemComponent
+    CombinationItemComponent,
+    SlotComponent,
+    SlotEntryComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatListModule,
+    MatListModule, MatCardModule, MatExpansionModule, MatInputModule, MatRadioModule, MatFormFieldModule, MatIconModule,
     RouterModule.forRoot(routes)
   ],
   providers: [
