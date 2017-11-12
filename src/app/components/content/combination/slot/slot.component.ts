@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import {Slot} from "../../../common/slot.model";
+import {Slot} from "../../../../common/slot.model";
 
 @Component({
   selector: 'app-combination-slot',

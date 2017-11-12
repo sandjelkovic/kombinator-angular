@@ -3,14 +3,14 @@ import {NgModule} from '@angular/core';
 import {MatListModule, MatCardModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatRadioModule, MatIconModule} from "@angular/material";
 
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './header/header.component';
-import {ContentComponent} from './content/content.component';
+import {HeaderComponent} from './components/header/header.component';
+import {ContentComponent} from './components/content/content.component';
 import {FormsModule} from "@angular/forms";
-import {NavigationBarComponent} from './header/navigation-bar/navigation-bar.component';
-import {MainHeaderBarComponent} from './header/main-header-bar/main-header-bar.component';
-import {CombinationListComponent} from './content/combination-list/combination-list.component';
-import {CombinationComponent} from './content/combination/combination.component';
-import {CombinationItemComponent} from './content/combination-list/combination-item/combination-item.component';
+import {NavigationBarComponent} from './components/header/navigation-bar/navigation-bar.component';
+import {MainHeaderBarComponent} from './components/header/main-header-bar/main-header-bar.component';
+import {CombinationListComponent} from './components/content/combination-list/combination-list.component';
+import {CombinationComponent} from './components/content/combination/combination.component';
+import {CombinationItemComponent} from './components/content/combination-list/combination-item/combination-item.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {RouterModule} from "@angular/router";
 
@@ -19,8 +19,8 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/take';
 import {CombinationService} from "./services/combination.service";
-import { SlotComponent } from './content/combination/slot/slot.component';
-import { SlotEntryComponent } from './content/combination/slot-entry/slot-entry.component';
+import { SlotComponent } from './components/content/combination/slot/slot.component';
+import { SlotEntryComponent } from './components/content/combination/slot-entry/slot-entry.component';
 
 const routes = [
   {path: '', component: CombinationListComponent},

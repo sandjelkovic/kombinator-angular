@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {CombinationService} from "../../services/combination.service";
-import {Combination} from "../../common/combination.model";
+import {CombinationService} from "../../../services/combination.service";
+import {Combination} from "../../../common/combination.model";
 
 @Component({
   selector: 'app-combination-list',

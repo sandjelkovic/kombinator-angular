@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Combination} from "../../common/combination.model";
-import {Slot} from "../../common/slot.model";
-import {SlotEntry} from "../../common/slot-entry.model";
+import {Combination} from "../../../common/combination.model";
+import {Slot} from "../../../common/slot.model";
+import {SlotEntry} from "../../../common/slot-entry.model";
 
 @Component({
   selector: 'app-combination',

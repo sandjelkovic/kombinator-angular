@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Combination} from "../../../common/combination.model";
+import {Combination} from "../../../../common/combination.model";
 
 @Component({
   selector: 'app-combination-item',
