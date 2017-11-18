@@ -2,7 +2,7 @@ import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {Slot} from "../../../../common/slot.model";
 
 @Component({
-  selector: 'app-combination-slot',
+  selector: 'app-slot',
   templateUrl: './slot.component.html',
   styleUrls: ['./slot.component.css'],
   encapsulation: ViewEncapsulation.None

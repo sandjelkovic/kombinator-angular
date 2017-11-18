@@ -1,3 +1,4 @@
-<p>
-  combination-slot-entry works!
-</p>
+<mat-radio-button (change)="onChangeState($event)">
+  {{entry.name}}
+  <br/>selected: {{entry.selected}}
+</mat-radio-button>

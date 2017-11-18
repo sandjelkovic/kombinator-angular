@@ -1,6 +1,17 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {MatListModule, MatCardModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatRadioModule, MatIconModule} from "@angular/material";
+// import {MediaQueriesModule, FlexLayoutModule} from '@angular/flex-layout';
+import {
+  MatButtonToggleModule,
+  MatCardModule,
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatRadioModule
+} from "@angular/material";
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './components/header/header.component';
@@ -19,8 +30,10 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/take';
 import {CombinationService} from "./services/combination.service";
-import { SlotComponent } from './components/content/combination/slot/slot.component';
-import { SlotEntryComponent } from './components/content/combination/slot-entry/slot-entry.component';
+import {SlotComponent} from './components/content/combination/slot/slot.component';
+import {SlotEntryComponent} from './components/content/combination/slot-entry/slot-entry.component';
+import {SlotEntriesComponent} from './components/content/combination/slot-entries/slot-entries.component';
+import {SlotEntryAddNewComponent} from './components/content/combination/slot-entry-add-new/slot-entry-add-new.component';
 
 const routes = [
   {path: '', component: CombinationListComponent},
@@ -39,13 +52,16 @@ const routes = [
     CombinationComponent,
     CombinationItemComponent,
     SlotComponent,
-    SlotEntryComponent
+    SlotEntryComponent,
+    SlotEntriesComponent,
+    SlotEntryAddNewComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatListModule, MatCardModule, MatExpansionModule, MatInputModule, MatRadioModule, MatFormFieldModule, MatIconModule,
+    // MediaQueriesModule, FlexLayoutModule,
+    MatListModule, MatCardModule, MatExpansionModule, MatInputModule, MatRadioModule, MatFormFieldModule, MatIconModule, MatGridListModule, MatButtonToggleModule,
     RouterModule.forRoot(routes)
   ],
   providers: [

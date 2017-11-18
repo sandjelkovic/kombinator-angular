@@ -11,14 +11,18 @@ import {SlotEntry} from "../../../common/slot-entry.model";
 export class CombinationComponent implements OnInit {
 
   @Input() combination: Combination;
-  private slots: Array<Slot>;
+  public slots: Array<Slot>;
 
   constructor() {
   }
 
   ngOnInit() {
     // retrieve
-    this.slots = Array<Slot>(
+    this.slots = this.mockedSlots()
+  }
+
+  private mockedSlots() {
+    return Array<Slot>(
       new Slot("CPU", "0", [
         new SlotEntry("Intel i5"),
         new SlotEntry("AMD Ryzen 7")
@@ -30,7 +34,6 @@ export class CombinationComponent implements OnInit {
         new SlotEntry("nVidia GTX 1060", "", "", "", true)
       ]),
       new Slot("", "")
-    )
+    );
   }
-
 }
