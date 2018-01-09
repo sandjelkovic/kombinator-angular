@@ -1,7 +1,6 @@
 import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {SlotEntry} from "../../../../common/slot-entry.model";
 import {MediaChange, ObservableMedia} from "@angular/flex-layout";
-// import {MediaChange, ObservableMedia} from "@angular/flex-layout";
 
 
 @Component({
@@ -12,12 +11,11 @@ import {MediaChange, ObservableMedia} from "@angular/flex-layout";
 })
 export class SlotEntriesComponent implements OnInit {
 
-  @Input() entries : Array<SlotEntry>;
+  @Input() entries: Array<SlotEntry>;
 
   columnNum = 0;
 
-  constructor(media: ObservableMedia)
-  {
+  constructor(media: ObservableMedia) {
     media.asObservable()
       .subscribe((change: MediaChange) => {
         // alert(change.mqAlias);

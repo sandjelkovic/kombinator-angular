@@ -1,0 +1,17 @@
+<mat-accordion>
+  {{slots.length}}
+  <mat-expansion-panel hideToggle="true" *ngFor="let slot of slots">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{slot.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{slot.selectedEntry()?.name}}
+      </mat-panel-description>
+      {{slot.value}}
+    </mat-expansion-panel-header>
+    <app-slot-entries [entries]="slot.entries"></app-slot-entries>
+
+    <app-slot [slot]="slot"></app-slot>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -2,15 +2,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 // import {MediaQueriesModule, FlexLayoutModule} from '@angular/flex-layout';
 import {
-  MatButtonToggleModule,
-  MatCardModule,
-  MatExpansionModule,
-  MatFormFieldModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatRadioModule
+  MatButtonToggleModule, MatCardModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule,
+  MatListModule, MatRadioModule
 } from "@angular/material";
 
 import {AppComponent} from './app.component';
@@ -35,6 +28,7 @@ import {SlotEntryComponent} from './components/content/combination/slot-entry/sl
 import {SlotEntriesComponent} from './components/content/combination/slot-entries/slot-entries.component';
 import {SlotEntryAddNewComponent} from './components/content/combination/slot-entry-add-new/slot-entry-add-new.component';
 import {FlexLayoutModule, MediaQueriesModule} from "@angular/flex-layout";
+import {SlotListComponent} from './components/content/combination/slot-list/slot-list.component';
 
 const routes = [
   {path: '', component: CombinationListComponent},
@@ -55,7 +49,8 @@ const routes = [
     SlotComponent,
     SlotEntryComponent,
     SlotEntriesComponent,
-    SlotEntryAddNewComponent
+    SlotEntryAddNewComponent,
+    SlotListComponent
   ],
   imports: [
     BrowserModule,
