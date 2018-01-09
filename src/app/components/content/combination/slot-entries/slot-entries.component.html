@@ -1,4 +1,4 @@
-<mat-grid-list [cols]="5">
+<mat-grid-list [cols]="columnNum">
     <mat-grid-tile *ngFor="let entry of entries" >
         <app-slot-entry [entry]="entry"></app-slot-entry>
     </mat-grid-tile>

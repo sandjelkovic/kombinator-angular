@@ -34,6 +34,7 @@ import {SlotComponent} from './components/content/combination/slot/slot.componen
 import {SlotEntryComponent} from './components/content/combination/slot-entry/slot-entry.component';
 import {SlotEntriesComponent} from './components/content/combination/slot-entries/slot-entries.component';
 import {SlotEntryAddNewComponent} from './components/content/combination/slot-entry-add-new/slot-entry-add-new.component';
+import {FlexLayoutModule, MediaQueriesModule} from "@angular/flex-layout";
 
 const routes = [
   {path: '', component: CombinationListComponent},
@@ -60,7 +61,7 @@ const routes = [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    // MediaQueriesModule, FlexLayoutModule,
+    MediaQueriesModule, FlexLayoutModule,
     MatListModule, MatCardModule, MatExpansionModule, MatInputModule, MatRadioModule, MatFormFieldModule, MatIconModule, MatGridListModule, MatButtonToggleModule,
     RouterModule.forRoot(routes)
   ],
