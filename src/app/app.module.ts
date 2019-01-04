@@ -21,6 +21,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/take';
+import 'rxjs/add/operator/reduce';
+import 'rxjs/add/operator/toArray';
 import {CombinationService} from "./services/combination.service";
 import {SlotComponent} from './components/content/combination/slot/slot.component';
 import {SlotEntryComponent} from './components/content/combination/slot-entry/slot-entry.component';
@@ -31,7 +33,7 @@ import {SlotListComponent} from './components/content/combination/slot-list/slot
 
 const routes = [
   {path: '', component: CombinationListComponent},
-  {path: ':combinationUUID', component: CombinationComponent},
+  {path: 'combinations/:combinationUUID', component: CombinationComponent},
   {path: '**', redirectTo: '/'}
 ];
 

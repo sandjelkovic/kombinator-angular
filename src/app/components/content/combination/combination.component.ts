@@ -1,39 +1,36 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Combination} from "../../../common/combination.model";
-import {Slot} from "../../../common/slot.model";
-import {SlotEntry} from "../../../common/slot-entry.model";
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Slot } from "../../../common/slot.model";
+import { ActivatedRoute, Params, ParamMap } from '@angular/router';
+import { CombinationService } from '../../../services/combination.service';
+import { Combination } from '../../../common/combination.model';
 
 @Component({
   selector: 'app-combination',
   templateUrl: './combination.component.html',
   styleUrls: ['./combination.component.css']
 })
-export class CombinationComponent implements OnInit {
+export class CombinationComponent implements OnInit, OnDestroy {
 
-  @Input() combination: Combination;
-  public slots: Array<Slot>;
+  @Input() combination: Combination = new Combination("mocked UUID", "Mocked combination");
+  public slots: Array<Slot> = [];
+  private sub: any;
 
-  constructor() {
+  constructor(private route: ActivatedRoute, private combinationService: CombinationService) {
   }
 
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+  // TODO split this param handling into a separate, router aware component and use it to call this component
   ngOnInit() {
-    // retrieve
-    this.slots = this.mockedSlots()
+    this.sub = this.route.paramMap
+      .filter((map: ParamMap, index: number) => map.has("combinationUUID"))
+      .map((map: ParamMap) => map.get("combinationUUID"))
+      .map((uuid: string) => this.combinationService.getSlots(uuid))
+      // Thanks RX... For no collect operator. Mutability all the way
+      .subscribe((slotsArray) => {
+        this.slots = slotsArray
+      })
   }
 
-  private mockedSlots() {
-    return Array<Slot>(
-      new Slot("CPU", "0", [
-        new SlotEntry("Intel i5"),
-        new SlotEntry("AMD Ryzen 7")
-      ]),
-      new Slot("Motherboard", "154"),
-      new Slot("GPU", "0", [
-        new SlotEntry("nVidia GTX 1060"),
-        new SlotEntry("AMD Radeon 380"),
-        new SlotEntry("nVidia GTX 1060", "", "", "", true)
-      ]),
-      new Slot("", "")
-    );
-  }
 }
