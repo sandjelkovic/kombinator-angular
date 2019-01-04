@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {CombinationService} from "../../../services/combination.service";
-import {Combination} from "../../../common/combination.model";
+import { Component, OnInit } from '@angular/core';
+import { CombinationService } from "../../../services/combination.service";
+import { Combination } from "../../../common/combination.model";
 
 @Component({
   selector: 'app-combination-list',
@@ -9,7 +9,7 @@ import {Combination} from "../../../common/combination.model";
 })
 export class CombinationListComponent implements OnInit {
 
-  private combinations: Array<Combination>;
+  public combinations: Array<Combination>;
 
   constructor(private combinationService: CombinationService) {
   }
