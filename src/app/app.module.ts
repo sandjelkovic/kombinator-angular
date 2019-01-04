@@ -14,7 +14,6 @@ import {NavigationBarComponent} from './components/header/navigation-bar/navigat
 import {MainHeaderBarComponent} from './components/header/main-header-bar/main-header-bar.component';
 import {CombinationListComponent} from './components/content/combination-list/combination-list.component';
 import {CombinationComponent} from './components/content/combination/combination.component';
-import {CombinationItemComponent} from './components/content/combination-list/combination-item/combination-item.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {RouterModule} from "@angular/router";
 
@@ -45,7 +44,6 @@ const routes = [
     MainHeaderBarComponent,
     CombinationListComponent,
     CombinationComponent,
-    CombinationItemComponent,
     SlotComponent,
     SlotEntryComponent,
     SlotEntriesComponent,

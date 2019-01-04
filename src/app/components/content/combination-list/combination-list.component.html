@@ -1,5 +1,6 @@
 <!--List of combinations-->
 <mat-nav-list>
-  <app-combination-item *ngFor="let combi of combinations" [combination]="combi"></app-combination-item>
+  <!-- <app-combination-item *ngFor="let combi of combinations" [combination]="combi"></app-combination-item> -->
+  <a *ngFor="let combination of combinations" routerLink="{{combination.uuid}}" mat-list-item>{{combination.name}} </a>
 </mat-nav-list>
 <!--List of combinations-->
